@@ -60,6 +60,7 @@ def draw_seq_log(PSSM,title, AX=None,lw=3.0,alpha=1):
     ax.set_title(title, fontsize=20)
     A       = np.array(PSSM)
     for i in range(A.shape[0]):
+        A[i,:]     /= sum(A[i,:])
         methods     = (draw_A, draw_C, draw_G, draw_T)
         x           = i
         width       = 0.9
