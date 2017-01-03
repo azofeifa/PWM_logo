@@ -6,7 +6,7 @@ Example usage is below and requires only matplotlib. Please let me know of any q
 ```
 import draw_logo
 import matplotlib.pyplot as plt
-A=[    [ 0.356611,0.085184,0.455087,0.103118],
+D=[    [ 0.356611,0.085184,0.455087,0.103118],
 
        [ 0.217352,0.033832,0.616781,0.132036],
 
@@ -22,12 +22,12 @@ A=[    [ 0.356611,0.085184,0.455087,0.103118],
   ]
 
 ax       = plt.gca()
-L        = draw_logo.logo(A, name="P53")
+L        = draw_logo.logo(D, name="P53")
 L.draw(ax=ax)
 plt.show()
 ```
 
 The input matrix can be normalized or unnormalized, a numpy array or a list of lists. Importantly the column order show be:
-A,C,G,T
+A,C,G,T. The below image shows the full (not truncated like the matrix D in the above example) PWM of the P53 binding motif.
 
 ![Alt text](https://github.com/azofeifa/PWM_logo/blob/master/images/example.png)
